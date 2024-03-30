@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+
 namespace MapTeleport
 {
     public partial class ModEntry
@@ -15,6 +16,7 @@ namespace MapTeleport
         {
             if (!Config.ModEnabled)
                 return false;
+
             if (addedCoordinates == null)
             {
                 addedCoordinates = SHelper.Data.ReadJsonFile<CoordinatesList>("coordinates.json");
@@ -67,18 +69,34 @@ namespace MapTeleport
                     // Split the input string based on the slash
                     string[] parts = c.Value.name.Split('/');
                     string mapName = parts[0];
-                    SMonitor.Log($"Teleport to Map: {mapName}", LogLevel.Debug);
+                    int coordinateID = c.Value.myID;
+                    SMonitor.Log($"Teleport to MapName: {mapName}", LogLevel.Debug);
                     SMonitor.Log($"Location: {c.Value.name}", LogLevel.Debug);
-                    SMonitor.Log($"ID : {c.Value.myID}", LogLevel.Debug);
+                    SMonitor.Log($"ID : {coordinateID}", LogLevel.Debug);
 
                     CoordinatesList coordinatesList = SHelper.Data.ReadJsonFile<CoordinatesList>("assets/coordinates.json");
 
-                    //Coordinates destination;
 
+                    //Coordinates destination;
                     foreach (Coordinates coord in coordinatesList.coordinates) {
-                        if (coord.mapName == mapName) {
-                            //Game1.activeClickableMenu?.exitThisMenu(true);
-                            //Game1.warpFarmer(teleportTo, coord.x, coord.y, false);
+                        if (coord.id == coordinateID) { // Found Coordinate
+
+
+                            Console.WriteLine($"Farm Type: {Game1.GetFarmTypeKey()}");
+                            bool willTeleport = true;
+                            if (Config.ProgressionModeEnabled) {
+                                // Check all restricted areas , first Mines
+                                willTeleport = CheckMinesUnlock(coord);
+                            }
+                            // Is event up
+                            //Game1.eventUp
+
+                            if (willTeleport) {
+                                SMonitor.Log($"[Teleport to] : {coord.id} {coord.x} {coord.y}");
+                                Console.WriteLine($"[Teleport to] : {coord.id} {coord.x} {coord.y}");
+                                Game1.activeClickableMenu?.exitThisMenu(true);
+                                Game1.warpFarmer(mapName, coord.x, coord.y, false);
+                            }
                         }
                     }
 
@@ -96,14 +114,28 @@ namespace MapTeleport
 
         }
 
+        public static bool CheckMinesUnlock(Coordinates coord) 
+        {
+            // Mines/AdventureGuild/Quarry won't be accessible until 5th day of year 1
+            int[] mineAreas = {1013, 1015, 1016};
+            int currentYear = Game1.year;
+            int currentDayOfMonth = Game1.dayOfMonth;
+            return !(currentYear == 1 && currentDayOfMonth < 5 && Array.Exists(mineAreas, element => element == coord.id));
+        }
+
         [HarmonyPatch(typeof(MapPage), nameof(MapPage.receiveLeftClick))]
         public class MapPage_receiveLeftClick_Patch
         {
             public static bool Prefix(MapPage __instance, int x, int y)
             {
                 
-                bool found = CheckClickableComponents(__instance.points, __instance.xPositionOnScreen, __instance.yPositionOnScreen, x, y);
-                return !found;
+                //bool found = CheckClickableComponents(__instance.points, __instance.xPositionOnScreen, __instance.yPositionOnScreen, x, y);
+                //return !found;
+                //Game1.addHUDMessage(new HUDMessage("Fuck", 3));
+
+                string message = "This looks like a typewriter ... ^But it's not ...^It's a computer.^";
+                Game1.activeClickableMenu = new DialogueBox(message);
+                return false;
             }
         }
 

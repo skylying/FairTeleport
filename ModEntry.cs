@@ -3,6 +3,7 @@ using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Menus;
+using System;
 using System.IO;
 using System.Linq;
 
@@ -14,6 +15,7 @@ namespace MapTeleport
         public static ModConfig Config;
         public static IModHelper SHelper;
         public static IMonitor SMonitor;
+        public SButton hotkey = SButton.Z;
         private static bool isSVE;
         private static bool hasRSV;
         private static bool hasES;
@@ -26,6 +28,9 @@ namespace MapTeleport
             Config = Helper.ReadConfig<ModConfig>();
             if (!Config.ModEnabled)
                 return;
+            
+            // Subscribe button event
+            helper.Events.Input.ButtonsChanged += this.OnButtonsChanged;
 
             context = this;
             SMonitor = Monitor;
@@ -97,6 +102,14 @@ namespace MapTeleport
 
             }
 
+        }
+
+        private void OnButtonsChanged(object? sender, ButtonsChangedEventArgs e) 
+        {
+            if (e.Pressed.Contains(this.hotkey)) {
+                string message = "This looks like a typewriter ... ^But it's not ...^It's a computer.^";
+                Game1.activeClickableMenu = new MapTeleportMenu();
+            }
         }
     }
 }

@@ -2,213 +2,207 @@
     "coordinates": [
         {
             "id": 1001,
-            "mapName": "Desert",
-            "x": 6,
-            "y": 52
+            "mapName": "Backwoods",
+            "x": 48,
+            "y": 14,
+            "location": "Backwoods/Default"
         },
         {
             "id": 1002,
-            "mapName": "Farm",
-            "x": 64,
-            "y": 15
-        },
-        {
-            "id": 1003,
-            "mapName": "Backwoods",
-            "x": 22,
-            "y": 16
+            "mapName": "Beach",
+            "x": 49,
+            "y": 11,
+            "location": "Beach/ElliottCabin"
         },
         {
             "id": 1004,
-            "mapName": "BusStop",
-            "x": 14,
-            "y": 22
+            "mapName": "Beach",
+            "x": 30,
+            "y": 34,
+            "location": "Beach/FishShop_DefaultHours"
         },
         {
             "id": 1005,
-            "mapName": "Forest",
-            "x": 5,
-            "y": 27
+            "mapName": "BusStop",
+            "x": 17,
+            "y": 12,
+            "location": "BusStop/Default"
         },
         {
             "id": 1006,
-            "mapName": "Forest",
-            "x": 90,
-            "y": 16
+            "mapName": "Desert",
+            "x": 6,
+            "y": 52 ,
+            "location": "Desert/Default"
         },
         {
             "id": 1007,
-            "mapName": "Forest",
-            "x": 104,
-            "y": 33
+            "mapName": "Farm",
+            "x": 81,
+            "y": 19,
+            "location": "Farm/Default",
+            "comment": "Farm Type: MeadowlandsFarm"
         },
         {
             "id": 1008,
-            "mapName": "Town",
-            "x": 10,
-            "y": 86
+            "mapName": "Forest",
+            "x": 90,
+            "y": 16,
+            "location": "Forest/MarnieRanch"
         },
         {
             "id": 1009,
-            "mapName": "Town",
-            "x": 20,
-            "y": 89
+            "mapName": "Forest",
+            "x": 104,
+            "y": 33,
+            "location": "Forest/LeahCottage"
         },
         {
             "id": 1010,
-            "mapName": "Town",
-            "x": 28,
-            "y": 67
+            "mapName": "Forest",
+            "x": 5,
+            "y": 27,
+            "location": "Forest/WizardTower"
         },
         {
             "id": 1011,
-            "mapName": "Town",
-            "x": 36,
-            "y": 56
+            "mapName": "Forest",
+            "x": 34,
+            "y": 96,
+            "location": "Forest/AbandonedHouse"
         },
         {
             "id": 1012,
-            "mapName": "Town",
-            "x": 43,
-            "y": 57
+            "mapName": "Forest",
+            "x": 94,
+            "y": 100,
+            "location": "Forest/SewerPipe"
         },
         {
             "id": 1013,
-            "mapName": "Town",
-            "x": 94,
-            "y": 82
+            "mapName": "Mountain",
+            "x": 76,
+            "y": 9,
+            "location": "Mountain/AdventureGuild"
         },
         {
             "id": 1014,
-            "mapName": "Town",
-            "x": 45,
-            "y": 71
+            "mapName": "Mountain",
+            "x": 12,
+            "y": 26,
+            "location": "Mountain/Carpenter"
         },
         {
             "id": 1015,
-            "mapName": "Town",
-            "x": 58,
-            "y": 86
+            "mapName": "Mountain",
+            "x": 54,
+            "y": 6,
+            "location": "Mountain/Mines"
         },
         {
             "id": 1016,
-            "mapName": "Town",
-            "x": 101,
-            "y": 90
+            "mapName": "Mountain",
+            "x": 54,
+            "y": 10,
+            "location": "Mountain/Quarry"
         },
         {
             "id": 1017,
-            "mapName": "Beach",
-            "x": 49,
-            "y": 11
+            "mapName": "Mountain",
+            "x": 27,
+            "y": 8,
+            "location": "Mountain/Tent"
         },
         {
             "id": 1018,
-            "mapName": "Town",
-            "x": 34,
-            "y": 97
-        },
-        {
-            "id": 1019,
-            "mapName": "Town",
-            "x": 46,
-            "y": 90
-        },
-        {
-            "id": 1020, // Pam
-            "mapName": "Town",
-            "x": 72,
-            "y": 69
+            "mapName": "Railroad",
+            "x": 27,
+            "y": 8,
+            "location": "Railroad/Railroad"
         },
         {
             "id": 1021,
             "mapName": "Town",
             "x": 57,
-            "y": 64
+            "y": 64,
+            "location": "Town/AlexHouse"
         },
         {
             "id": 1022,
-            "mapName": "Mountain",
-            "x": 12,
-            "y": 26
+            "mapName": "Town",
+            "x": 94,
+            "y": 82,
+            "location": "Town/Blacksmith"
         },
         {
             "id": 1023,
-            "mapName": "Mountain",
-            "x": 29,
-            "y": 8
+            "mapName": "Town",
+            "x": 52,
+            "y": 21,
+            "location": "Town/CommunityCenter"
         },
         {
-            "id": 1024,
-            "mapName": "Mine",
-            "x": 18,
-            "y": 13
-        },
-        {
-            "id": 1025, // adventurer's guild
-            "mapName": "Mountain",
-            "x": 76,
-            "y": 9
-        },
-        {
-            "id": 1026,
-            "mapName": "Mountain",
-            "x": 127,
-            "y": 11
+            "id": 1025,
+            "mapName": "Town",
+            "x": 20,
+            "y": 89,
+            "location": "Town/HaleyHouse"
         },
         {
             "id": 1027,
             "mapName": "Town",
             "x": 95,
-            "y": 51
+            "y": 51,
+            "location": "Town/JojaMart_Open"
         },
         {
             "id": 1028,
-            "mapName": "Beach",
-            "x": 30,
-            "y": 34
+            "mapName": "Town",
+            "x": 58,
+            "y": 87,
+            "location": "Town/ManorHouse"
         },
         {
             "id": 1029,
-            "mapName": "Railroad",
-            "x": 10,
-            "y": 57
+            "mapName": "Town",
+            "x": 101,
+            "y": 90,
+            "location": "Town/Museum"
         },
         {
             "id": 1030,
-            "mapName": "Woods",
-            "x": 58,
-            "y": 15
+            "mapName": "Town",
+            "x": 72,
+            "y": 69,
+            "location": "Town/Trailer"
         },
         {
             "id": 1031,
-            "mapName": "Forest",
-            "x": 34,
-            "y": 96
+            "mapName": "Town",
+            "x": 43,
+            "y": 57 ,
+            "location": "Town/PierreStore_InitialHours"
         },
         {
             "id": 1032,
             "mapName": "Town",
-            "x": 52,
-            "y": 20
+            "x": 45,
+            "y": 72,
+            "location": "Town/Saloon"
         },
         {
             "id": 1033,
-            "mapName": "Forest",
-            "x": 94,
-            "y": 100
+            "mapName": "Town",
+            "x": 10,
+            "y": 86,
+            "location": "Town/SamHouse"
         },
         {
             "id": 1034,
-            "mapName": "Railroad",
-            "x": 29,
-            "y": 45
-        },
-        {
-            "id": 1035,
-            "mapName": "IslandWest",
-            "x": 77,
-            "y": 41
-        },
+            "mapName": "Town",
+            "x": 35,
+            "y": 97,
+            "location": "Town/Sewer"
+        }
     ]
 }

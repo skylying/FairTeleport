@@ -6,5 +6,7 @@ namespace MapTeleport
     public class ModConfig
     {
         public bool ModEnabled { get; set; } = true;
+
+        public bool ProgressionModeEnabled { get; set; } = true;
     }
 }
